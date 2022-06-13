@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="recursos/favicon.ico">
+  <title>Blog con Markdown y Showdown</title>
+</head>
+
+<body>
+  <h1>Blog con Markdown y Showdown</h1>
+  <main> </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+  <script>
+    const d = document,
+      $main = d.querySelector("main");
+
+    fetch("recursos/javascript.md")
+      .then(res => res.ok ? res.text() : Promise.reject(res))
+      .then(text => {
+        console.log(text);
+        $main.innerHTML = new showdown.Converter().makeHtml(text);
+      })
+      .catch(err => {
+        console.log(err);
+        let mensaje = err.statusText || "Ocurrio Errorsuco";
+        $main.innerHTML = `Error ${err.status}: ${mensaje}`;
+      })
+  </script>
+</body>
+
+</html>

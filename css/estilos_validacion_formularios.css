@@ -1,0 +1,113 @@
+/*******Reseteo a CSS********/
+:root {
+  --fuente-principal: sans-serif;
+  --tamano-fuente: 16px;
+  --color-principal: rgb(0, 181, 252);
+  --color-secundario: black;
+  --color-modal-principal: rgb(63, 176, 167);
+  --color-modal-secundario: rgba(213, 242, 253, 0.8);
+  --anchura-contenedor: 1200px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--fuente-principal);
+  font-size: var(--tamano-fuente);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  /* todo lo que  se desborde en horizontal, se oculte y no se muestre la barra de desplazamiento */
+  background-color: antiquewhite;
+  color: black;
+  text-align: center;
+}
+
+/* VALIDACIONES DE FORMULARIOS */
+
+.formulario-contacto {
+  --formulario-ok-color: rgb(53, 227, 53);
+  --formulario-err-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.formulario-contacto > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.formulario-contacto textarea {
+  resize: none;
+}
+
+.formulario-contacto legend,
+.formulario-contacto-respuesta {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  font-size: 1rem;
+  font-family: sans-serif;
+  /* background-color: aquamarine; */
+}
+
+.formulario-contacto input[type="submit"] {
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario-contacto *::placeholder {
+  color: black;
+}
+
+.formulario-contacto [required]:valid {
+  border: thin solid var(--formulario-ok-color);
+}
+
+.formulario-contacto [required]:invalid {
+  border: thin solid var(--formulario-err-color);
+}
+
+.formulario-contacto-error {
+  margin-top: 1rem;
+  font-size: 80%;
+  background-color: var(--formulario-err-color);
+  color: white;
+  transition: all 800ms ease;
+}
+
+.formulario-contacto-error.is-active {
+  display: block;
+  /* Animacion "show message" es el nombre de la animacion "1s" va a tardar 1 segundo "1" solo se va a reproducir una vez "normal" de forma normal "0s" sin retardo "ease-out" tipo de animacion "both" va aconservar los estilos cuando la animacion termine */
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

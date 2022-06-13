@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: blue;
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: thin solid blue;
+  margin: 3rem auto;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sitio {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 50%;
+  text-align: center;
+}
+
+.publicacion {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 80%;
+  text-align: center;
+  background-color: beige;
+}
+
+.autor-publicacion img {
+  border-radius: 50%;
+}
+
+.fecha-publicacion {
+  margin: 1rem auto;
+  display: block;
+}
+
+.extracto-publicacion,
+.categorias-publicacion,
+.etiquetas-publicacion,
+.contenido-publicacion {
+  text-align: left;
+}
+
+.cagador {
+  display: block;
+  margin: 2rem auto;
+}
+
+.contenido-publicacion summary {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contenido-publicacion > article {
+  padding: 1rem;
+  background-color: thistle;
+}
+
+.contenido-publicacion img {
+  display: block;
+  margin: auto;
+}

@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.mariscos {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Todos los hijos de la clase mariscos cada una de las figure */
+/* flex: [factor de crecimiento] [factor de reduccion] [flex basis] */
+.mariscos > * {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.marisco {
+  background-color: salmon;
+  color: purple;
+  font-size: 125%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+.marisco:hover {
+  opacity: 0.9;
+  transform: scale(0.9);
+}
+
+.marisco img {
+  max-width: 100%;
+  height: auto;
+}
+
+.taco figcaption {
+  padding: 1rem;
+}

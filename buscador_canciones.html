@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos_buscador_canciones.css">
+  <link rel="icon" href="recursos/favicon.ico">
+  <title>Buscador de Canciones</title>
+</head>
+
+<body>
+  <h1>BUSCADOR DE MUSICA</h1>
+  <form id="buscador-cancion">
+    <input type="text" name="artista" placeholder="Nombre del Interprete" required><br>
+    <input type="text" name="cancion" placeholder="Nombre de la Rola" required><br>
+    <input type="submit">
+  </form>
+  <img class="cagador" src="recursos/circles.svg" alt="Cagando...">
+  <aside class="error"></aside>
+  <main>
+    <article class="info-artista"></article>
+    <article class="letra-cancion"> </article>
+  </main>
+  <script src="JS/buscador_canciones.js" as="script"></script>
+</body>
+
+</html>

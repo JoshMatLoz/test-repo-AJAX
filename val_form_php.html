@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="recursos/favicon.ico">
+  <link rel="stylesheet" href="css/estilos_validacion_formularios.css">
+  <title>Envío de Formulario con Fetch y PHP</title>
+</head>
+
+<body>
+  <main>
+    <section id="seccion14" class="section" data-scroll-espia>
+      <h2>Validaciones de Formulario con Fetch</h2>
+      <form class="formulario-contacto">
+        <legend>Envíanos tus comentarios</legend>
+        <input type="text" name="nombre" placeholder="Escribe tu nombre"
+          title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúüÜ]+$" required>
+        <input type="email" name="email" placeholder="Email" title="Email incorrecto"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <input type="text" name="asunto" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
+        <textarea name="comentarios" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$"
+          title="Tu comentario no debe exceder los 255 caracteres" required></textarea>
+        <input type="submit" value="Enviar">
+        <div class="formulario-contacto-cargar none">
+          <img src="recursos/circles.svg" alt="Cagando">
+        </div>
+        <div class="formulario-contacto-respuesta none">Los datos han sido enviados</div>
+      </form>
+    </section>
+  </main>
+  <script src="JS/val_form_php.js"></script>
+</body>
+
+</html>
